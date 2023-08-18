@@ -1,0 +1,25 @@
+@host = http://localhost:8000
+
+POST {{host}}/users HTTP/1.1
+content-type: application/json
+
+{
+  "first_name": "Citlalli",
+  "last_name": "Hills",
+  "email": "cabecod452@touchend.com",
+  "gender": "man",
+  "password": "123456",
+  "bYear": 1995,
+  "bMonth": 7,
+  "bDay": 19
+}
+
+###
+
+POST {{host}}/users/signin HTTP/1.1
+content-type: application/json
+
+{
+  "email": "cabecod452@touchend.com",
+  "password": "123456"
+}
