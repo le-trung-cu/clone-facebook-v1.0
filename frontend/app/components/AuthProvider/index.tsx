@@ -19,6 +19,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
 function Guards({ children }: { children: ReactNode }) {
   const session = useSession()
   const pathname = usePathname()
+  return <>{children}</>
 
   if ( !['/login', '/reg'].includes(pathname)  && session.status == 'unauthenticated') {
     return redirect('/login')
